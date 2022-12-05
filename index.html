@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Fundamentals Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/aaron.css"/>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  
+  </head>
+  <body>
+    
+    <!--HIGH SCORE AND TIMER-->
+    
+    <div class="container">
+    <header>
+      <a href="./scores.html" id="high-score-link">View High Scores</a>
+      <h1>JavaScript Fundamentals Quiz</h1>
+      <div id="timer">
+        <p>Time: <span id="time-left">75</span></p>
+      </div>
+    </header>
+    
+    <!--QUESTIONS-->
+
+      <main id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons">
+          <button class="btn" id="choice-btn-1">Choice 1</button>
+          <button class="btn" id="choice-btn-2">Choice 2</button>
+          <button class="btn" id="choice-btn-3">Choice 3</button>
+          <button class="btn" id="choice-btn-4">Choice 4</button>
+      </div>
+      </main>
+      
+      <div class="controls">
+        <div class="welcome-message"></div>
+        <div class="game-over-message hide">Game over. 
+          <a href="./index.html" id="play-again-link">Play again?</a>
+        </div>
+        <button id="start-btn" class="start-btn btn">Start</button>
+      </div>
+
+      <form id ="score-form" class = "score-form hide">
+        <label id = "label">Add your name to the highscore list.</label>
+        <input oninput="this.value = this.value.toUpperCase()" type="text" id="user-initials" placeholder="Name">
+        <button id ="submit-btn">Submit</button>
+      </form>
+      </div>  
+        
+<!--AARON CORNER MODAL-->
+
+      <section class="aaron">
+        <img id="aaron-image" src="./assets/images/Aaron.png" alt="Cartoon image of Aaron Raikes">
+        <span class="aarontext">Thanks for checking out my Quiz. I hope you enjoyed playing.
+        </span>
+        </section>  
+    
+    <!--SCRIPT-->
+
+        <script src="./assets/script.js"></script>
+</body>
+</html>
