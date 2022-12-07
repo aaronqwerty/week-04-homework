@@ -272,6 +272,7 @@ function enterScore(event) {
     "initials": userInitials,
     "score": score
   };
+  
   highestScore.push(scoreObject);
   localStorage.setItem("scoreSet", JSON.stringify(highestScore));
   window.location.href = "scores.html";
