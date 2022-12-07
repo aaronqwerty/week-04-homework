@@ -8,8 +8,8 @@
   --white: white;
   --choice-btn:rgb(80, 150, 241);
   --choice-btn-hv:rgb(20, 110, 228);
-  --high-score-list-col-1:rgb(80, 150, 241);
-  --high-score-list-col-2: rgb(20, 110, 228);
+  --high-score-list-col-1:rgb(190, 190, 190);
+  --high-score-list-col-2: rgb(228, 228, 228);
 }
 
 body {
@@ -234,7 +234,7 @@ header h1 {
 #play-again-score-screen {
   background-color: var(--choice-btn);
   padding: 15px 20px;
-  border-radius: 15px;
+  border-radius: 5px;
   cursor: grab;
   text-decoration: none;
   color: #000;
@@ -243,13 +243,15 @@ header h1 {
   font-weight: 600;
   box-shadow: 2px 2px 2px darkgray;
   width: 100%;
+  border: 2px solid;
+  border-color: #000;
 }
 
 #reset-score {
   width: 40%;
   background-color: var(--choice-btn);
   padding: 15px 20px;
-  border-radius: 15px;
+  border-radius: 5px;
   cursor: grab;
   text-decoration: none;
   color: #000;
@@ -257,7 +259,8 @@ header h1 {
   font-size: 1.15rem;
   font-weight: 600;
   box-shadow: 2px 2px 2px darkgray;
-  border:none;
+  border: 2px solid;
+  border-color: #000;
 }
 
 .hide {
