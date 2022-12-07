@@ -6,10 +6,10 @@
   --right:green;
   --wrong:red;
   --white: white;
-  --choice-btn:pink;
-  --choice-btn-hv:rgb(253, 177, 190);
-  --high-score-list-col-1:pink;
-  --high-score-list-col-2: rgb(253, 177, 190);
+  --choice-btn:rgb(80, 150, 241);
+  --choice-btn-hv:rgb(20, 110, 228);
+  --high-score-list-col-1:rgb(80, 150, 241);
+  --high-score-list-col-2: rgb(20, 110, 228);
 }
 
 body {
@@ -58,10 +58,25 @@ header h1 {
   right:5%;
 }
 
+#clock {
+  width: 20px;
+  height: 20px;
+}
+
+#confetti {
+  width: 200px;
+  height: 200px;
+}
+
+#fail {
+  width: 200px;
+  height: 200px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 60%;
   width:60%;
   max-width: 70%;
@@ -178,7 +193,7 @@ header h1 {
 /* high scores page  */
 #high-scores-container {
   display: flex;
-  width: 40%;
+  justify-content: center;
   margin: auto;
   flex-direction: column;
   font-size: 1rem;
