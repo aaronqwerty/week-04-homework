@@ -84,6 +84,17 @@ function countDown() {
   }, 1000);
 }
 
+function hideShowClock() {
+  var clock = document.getElementById("clock");
+  clock.classList.toggle("clockHide");
+}
+
+function hideShowConfetti() {
+  var clock = document.getElementById("confetti");
+  clock.classList.toggle("confettiHide");
+}
+
+
 // Get question 1
 function getQuestion1() {
   question.innerHTML = questions[0].question;
@@ -217,8 +228,16 @@ function wrongAnswer() {
 function getResult() {
   score = timeLeft;
   questionContainer.innerText = "Your score = " + score;
-  scoreForm.classList.remove("hide");
   timeLeftDisplay.classList.add("hide");
+  clock.classList.add("hide");
+  clock1.classList.add("hide");
+  if (score >= 1) {
+    setTimeout(confetti.classList.remove("hide"), 1000);
+    scoreForm.classList.remove("hide");
+  };
+  // if (let(this.score) => 1) {
+  //   setTimeout(confetti.classList.remove("hide"), 1000);
+  // };
   console.log(score);
 }
 
@@ -228,6 +247,8 @@ function startGame() {
   welcomeContent.classList.add("hide");
   currentQuestionIndex = 0;
   questionContainer.classList.remove("hide");
+  clock1.classList.remove("hide");
+  clock.classList.remove("hide");
   countDown();
   getQuestion1();
 }
@@ -236,10 +257,12 @@ gameOverMessage = document.querySelector(".game-over-message")
 
 function gameOver() {
   timeLeft = 0;
-  gameOverMessage.classList.remove("hide")
-  answerButtons.classList.add("hide")
-  questionContainer.classList.add("hide")
-  
+  gameOverMessage.classList.remove("hide");
+  answerButtons.classList.add("hide");
+  questionContainer.classList.add("hide");
+  fail.classList.remove("hide");
+  clock.classList.add("hide");
+  clock1.classList.add("hide");
 }
 
 function enterScore(event) {
@@ -257,18 +280,3 @@ function enterScore(event) {
 //Start button starts calls startGame
 startButton.addEventListener("click", startGame);
 submitButton.addEventListener("click", enterScore);
-
-
-
-
-// GIVEN I am taking a code quiz
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
-// WHEN I answer a question
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-// WHEN the game is over
-// THEN I can save my initials and my score

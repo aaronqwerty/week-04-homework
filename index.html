@@ -18,12 +18,18 @@
     <header>
       <a href="./scores.html" id="high-score-link">View High Scores</a>
       <h1>JavaScript Fundamentals Quiz</h1>
+      
       <div id="timer">
-        <p>Time: <span id="time-left">75</span></p>
+        <div><img id="clock" class="hide" src="./assets/images/clock.gif" alt="A countdown clock"></div>
+        <p id="clock1" class="">Time: <span id="time-left">75</span></p>
       </div>
+      
     </header>
     
     <!--QUESTIONS-->
+
+      <div><img id="confetti" class="hide" src="./assets/images/confetti.gif" alt="Confeti exploding"></div>
+      <div><img id="fail" class="hide" src="./assets/images/fail.gif" alt="Confeti exploding"></div>
 
       <main id="question-container" class="hide">
         <div id="question">Question</div>
@@ -47,6 +53,7 @@
         <label id = "label">Add your name to the highscore list.</label>
         <input oninput="this.value = this.value.toUpperCase()" type="text" id="user-initials" placeholder="Name">
         <button id ="submit-btn">Submit</button>
+        
       </form>
       </div>  
         
